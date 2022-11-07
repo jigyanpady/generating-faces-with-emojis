@@ -24,7 +24,7 @@ class PULSE(torch.nn.Module):
             self.synthesis.load_state_dict(torch.load(f))
 
         for param in self.synthesis.parameters():
-            param.requires_grad = False
+            param.requires_grad = true
 
         self.lrelu = torch.nn.LeakyReLU(negative_slope=0.2)
 
